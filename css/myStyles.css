@@ -1,0 +1,156 @@
+/* 
+Website Name: Favourite Movie
+Website Author: Shalil Dsilva
+Student id: 0810045 
+
+Color Guide:
+rgba(238, 227, 227, 0.87) - Light Grey
+#aaa - Grey
+#fff - White
+
+Typography Guide:
+body: 'Shantell Sans', cursive, Arial, sans-serif;
+.multi_drop_menu : 'Quicksand', Arial, sans-serif;
+
+*********************************
+=================
+Table of Contents
+=================
+1. Body Styles
+2. Navigation Styles Horizontal
+3. Navigation Styles Vertical
+*********************************
+*/
+
+
+/*******************
+1. Body Styles 
+********************/
+body {
+    line-height: 30px;
+    background-color: black;
+    color: rgba(238, 227, 227, 0.87);
+    font-family: 'Shantell Sans', cursive, sans-serif;
+    margin: 0 30px 0 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0 40px;
+}
+
+h2 {
+    font-size: 25px;
+    padding: 20px 0;
+}
+
+aside {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+figure img {
+    width: 500px;
+    height: 400px;
+}
+
+/********************************
+2. Navigation Styles Horizontal
+*********************************/
+.multi_drop_menu {
+    font: 1em 'Quicksand', arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.multi_drop_menu a {
+    display: block;
+    color: #555;
+    background-color: #eee;
+    padding: .2em 1em;
+    border-width: 3px;
+    border-color: transparent
+}
+
+.multi_drop_menu a:hover {
+    color: #fff;
+    background-color: #aaa;
+}
+
+.multi_drop_menu a:active {
+    background-color: #fff;
+    color: #ccc;
+}
+
+
+.multi_drop_menu ul {
+    /* float: left; */
+    display: flex;
+}
+
+.multi_drop_menu li {
+    /* float: left; */
+    list-style-type: none;
+    position: relative;
+}
+
+.multi_drop_menu li a {
+    border-right-style: solid;
+    background-clip: padding-box;
+    text-decoration: none;
+}
+
+.multi_drop_menu li:last-child a {
+    border-right-style: none;
+}
+
+.multi_drop_menu li ul {
+    display: none;
+    width: 9em;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+
+.multi_drop_menu li li a {
+    border-right-style: none;
+    border-top-style: solid;
+}
+
+.multi_drop_menu li:hover>ul {
+    display: block;
+}
+
+.multi_drop_menu li li ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+/********************************
+3. Navigation Styles Vertical
+*********************************/
+
+.multi_drop_menu.vertical {
+    width: 8em;
+}
+
+.multi_drop_menu.vertical li a {
+    border-right-style: none;
+    border-top-style: solid;
+}
+
+.multi_drop_menu.vertical li li a {
+    border-left-style: solid;
+}
+
+.multi_drop_menu.vertical ul {
+    flex-direction: column;
+}
+
+.multi_drop_menu.vertical li ul {
+    left: 100%;
+    top: 0px;
+}
+
